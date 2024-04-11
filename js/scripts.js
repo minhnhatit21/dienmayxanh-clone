@@ -17,14 +17,11 @@ $(document).ready(function () {
         e.preventDefault();
         var $parent = $(this).parent();
 
-        console.log("Parent: ", $parent);
-
         if(!$parent.hasClass("active-tab")) {
             $parent.siblings().removeClass("active-tab")
             $parent.addClass("active-tab");
 
             var prdPromoContentId = $(this).attr("href");
-            console.log("Product contentID: ", prdPromoContentId);
             $(prdPromoContentId).removeClass("hidden");
             $(prdPromoContentId).siblings().addClass("hidden");
         }
@@ -36,7 +33,6 @@ $(document).ready(function () {
 
         var $parent = $(this).parent().parent();
         var $this = $(this);
-        console.log($parent)
 
         if($parent.children().hasClass("hidden")) {
             $parent.children().removeClass("hidden");
